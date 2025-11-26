@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alok Computer  Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--accent:#ff6a00;--dark:#0b3b5a;--muted:#f6f6f6}
+    *{box-sizing:border-box}
+    body{font-family:Montserrat,system-ui,Arial,sans-serif;margin:0;color:#111}
+    header{background:linear-gradient(90deg,#ff4d00 0%, #ffb347 100%);padding:18px 10px;color:#002b5c}
+    .container{max-width:1100px;margin:0 auto;padding:20px}
+    .brand{display:flex;gap:20px;align-items:center}
+    .brand img{width:160px;height:auto;border-radius:6px;box-shadow:0 6px 18px rgba(0,0,0,0.15)}
+    h1{font-size:48px;margin:0;color:#0066cc;text-shadow:0 2px 0 rgba(255,255,255,0.2)}
+    p.lead{margin:6px 0 0;font-weight:700}
+
+    main{display:grid;grid-template-columns:1fr 320px;gap:24px;margin-top:20px}
+    .card{background:white;border-radius:12px;padding:18px;box-shadow:0 6px 20px rgba(11,59,90,0.06)}
+    .services ul{list-style:none;padding:0;margin:0}
+    .services li{padding:10px 12px;border-radius:8px;margin-bottom:10px;background:#e9f2ff;font-weight:700}
+
+    aside .contact{position:sticky;top:22px}
+    .contact h3{margin-top:0}
+    .contact .phone{font-size:20px;font-weight:900;color:#b02b2b}
+    .contact a.button{display:inline-block;margin-top:10px;padding:10px 14px;border-radius:8px;background:var(--dark);color:white;text-decoration:none}
+
+    footer{margin-top:28px;padding:18px 10px;background:var(--muted);text-align:center;border-top:1px solid #eee}
+
+    @media (max-width:900px){main{grid-template-columns:1fr} .brand img{width:110px} h1{font-size:34px}}
+
+    /* small helpful editor area */
+    .editor{font-family:monospace;background:#0f1724;color:#cfe8ff;padding:10px;border-radius:6px;margin-top:12px;font-size:13px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container brand">
+      <!-- Use local banner image provided by you. Path in environment: /mnt/data/Alok computer 222.jpg -->
+      <img src="logo.png" alt="Alok Computer banner">
+      <div>
+        <h1>Alok Computer</h1>
+        <!--<p class="lead">Poster design • KYC • Online form filling • ABHA & आयुष्मान कार्ड services</p>
+        <p style="margin:6px 0 0">Mob No. <strong>8795277675</strong></p>-->
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <main>
+      <section class="card">
+        <h2>About the shop</h2>
+        <p>Alok Computer helps with all kinds of online work: Like form filling, scholarship applications, ABHA card, आयुष्मान कार्ड, poster design and KYC for farmers.</p>
+
+        <div class="services" style="margin-top:14px">
+          <h3>Services</h3>
+          <ul>
+            <li>Online form filling (government & private)</li>
+            <li>Scholarship applications</li>
+            <li>ABHA / Ayushman Card</li>
+            <li>Poster & banner design</li>
+            <li>किसान KYC</li>
+            <li>Printing & photocopying</li>
+            <li>Instagram and Facebook Follower and Views Sell</li>
+          </ul>
+        </div>
+
+        <div style="margin-top:18px">
+          <h3>Email</h3>
+          <p>alokverma1923@gmail.com<br>alokverma1922@gmail.com</p>
+          <h3>Website</h3>
+          <p>www.alokcomputer.com</p>
+        </div>
+
+        <div style="margin-top:18px">
+          <h3>Quick contact form</h3>
+          <form onsubmit="event.preventDefault(); sendMessage();" id="contactForm">
+            <label>Name<br><input required name="name" type="text" style="width:100%;padding:8px;margin-top:6px;border-radius:6px;border:1px solid #ddd"></label>
+            <label style="display:block;margin-top:8px">Message<br><textarea required name="message" rows="4" style="width:100%;padding:8px;margin-top:6px;border-radius:6px;border:1px solid #ddd"></textarea></label>
+            <button type="submit" style="margin-top:10px;padding:10px 14px;border-radius:8px;border:0;background:var(--accent);color:white;font-weight:700">Send (opens email)</button>
+          </form>
+          <small style="display:block;margin-top:8px;color:#666">This will open your email client with the message — replace with a server endpoint when ready.</small>
+        </div>
+
+      </section>
+
+      <aside>
+        <div class="card contact">
+          <h3>Contact</h3>
+          <div class="phone">8795277675</div>
+          <p style="margin:8px 0">Add: Baikunthpur, Bhekariya, Maniar, Ballia (U.P) 277207</p>
+          <a class="button" href="tel:+918795277675">Call Now</a>
+          <a class="button" style="background:#2273b8;margin-left:8px;color:white;text-decoration:none" href="mailto:alokverma1923@gmail.com">Email</a>
+
+          <h4 style="margin-top:14px">Opening</h4>
+          <p style="margin:6px 0">Mon–Sun: 8:30 am — 9:00 pm </p>
+
+          <div style="margin-top:12px">
+            <h4>Location</h4>
+            <p style="margin:6px 0">Baikunthpur,Bhekariya,Maniar, Ballia, Uttar Pradesh</p>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <h3>Sample poster</h3>
+          <p>Use the banner above for printing. If you want a new poster, click to request a design.</p>
+          <button onclick="alert('Send a message with poster details (size, text, images)')" style="margin-top:8px;padding:10px 12px;border-radius:8px;background:#0b63a5;color:white;border:0;font-weight:700">Request poster</button>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <small>© Alok Computer — Contact: 8795277675 • Emails: alokverma1923@gmail.com, alokverma1922@gmail.com</small>
+    </footer>
+  </div>
+
+  <script>
+    function sendMessage(){
+      const f=document.getElementById('contactForm');
+      const name=f.elements['name'].value.trim();
+      const msg=f.elements['message'].value.trim();
+      const subject=encodeURIComponent('Website contact from '+name);
+      const body=encodeURIComponent(msg+"\n\nFrom: "+name);
+      window.location.href = 'mailto:alokverma1923@gmail.com?subject='+subject+'&body='+body;
+    }
+  </script>
+</body>
+</html>
